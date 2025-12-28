@@ -1,11 +1,12 @@
-Transaction Webhook Service
+**Transaction Webhook Service**
 
 This project implements a backend service that receives transaction webhooks, acknowledges them immediately, and processes transactions asynchronously in the background.
 
 The service is designed to be fast, idempotent, and reliable.
 
-Deployed Service URL - https://wfg-backend-y095.onrender.com/
-Features
+**Deployed Service URL** - https://wfg-backend-y095.onrender.com/
+
+**Features**
 
 Accepts transaction webhooks via HTTP
 
@@ -21,7 +22,7 @@ Exposes a health check and transaction status API
 
 Deployed as a public API on the cloud
 
-Tech Stack
+**Tech Stack**
 
 Python
 
@@ -35,7 +36,7 @@ Uvicorn
 
 Deployed on Render
 
-API Endpoints
+**API Endpoints**
 Health Check
 GET /
 
@@ -76,14 +77,14 @@ GET /v1/transactions/{transaction_id}
 
 Returns the current status of the transaction (PROCESSING or PROCESSED).
 
-Instructions to Run Locally
+**Instructions to Run Locally**
 Prerequisites
 
 Python 3.10 or higher
 
 MongoDB (local or MongoDB Atlas)
 
-Setup
+**Setup**
 
 Clone the repository
 
@@ -93,7 +94,7 @@ python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 
 
-Install dependencies:
+**Install dependencies:**
 
 pip install -r requirements.txt
 
@@ -113,7 +114,8 @@ uvicorn app.main:app --reload
 
 The service will be available at:
 
-http://localhost:8000
+http://localhost:8000 locally 
+and production deployed at  - https://wfg-backend-y095.onrender.com/ 
 
 
 Swagger docs:
